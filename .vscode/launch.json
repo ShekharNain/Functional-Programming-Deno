@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Execute code in current file",
+        "type": "pwa-node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "deno",
+        "runtimeArgs": ["run", "${file}"]
+      },
+      {
+        "name": "Run tests in current file",
+        "type": "pwa-node",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "deno",
+        "runtimeArgs": ["test", "${file}"],
+        "console": "integratedTerminal"
+      }
+      // {
+      //   "name": "Debug",
+      //   "type": "pwa-node",
+      //   "request": "launch",
+      //   "cwd": "${workspaceFolder}",
+      //   "runtimeExecutable": "deno",
+      //   "runtimeArgs": ["run", "--inspect-brk", "-A", "${file}"],
+      //   "attachSimplePort": 9229
+      // },
+      // {
+      //   "type": "pwa-node",
+      //   "request": "launch",
+      //   "name": "Run selected test case",
+      //   "runtimeExecutable": "deno",
+      //   "runtimeArgs": [
+      //     "test",
+      //     "${file}",
+      //     "--filter",
+      //     "${selectedText}"
+      //   ],
+      //   "console": "integratedTerminal"
+      // }
+    ]
+  }
