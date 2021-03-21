@@ -1,8 +1,8 @@
 import { IMonoid } from "./monoid.interface.ts";
 
 export class Any implements IMonoid<Any> {
-  public val: number;
-  constructor(x: number) {
+  public val: boolean;
+  constructor(x: boolean) {
     this.val = x;
   }
   
@@ -11,6 +11,6 @@ export class Any implements IMonoid<Any> {
   }
 
   static empty() {
-    return new Any(1);
+    return new Any(false);
   }
 }
