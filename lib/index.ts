@@ -5,6 +5,6 @@ export type { IMonoid } from "./monoid/monoid.interface.ts"
 
 export { memoizer } from "./memoizer.ts"
 
-export { curry2 } from "./curry.ts" 
+export { curry2, curry3 } from "./curry.ts" 
 
 export { compose } from "./compose.ts" ;
