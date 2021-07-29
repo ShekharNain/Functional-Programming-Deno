@@ -4,4 +4,4 @@ This repo contains examples & exercises for functional programming in deno. Exer
 ## Local Setup
 - `git clone` this repository in your local
 - To install deno, follow [this](https://deno.land/#installation) documentation
-- To test your solutions - `deno run <test-file>.ts`
+- To test your solutions - `deno test <test-file>.ts`
