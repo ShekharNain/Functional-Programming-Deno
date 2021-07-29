@@ -20,7 +20,7 @@ Deno.test("mutating the arguments passed to the function", () => {
     assertEquals(updatedFirstElement, 2); // Test will fail on this because the first element is modified in b/w the code flow
 });
 
-
+    
 
 
 
@@ -44,7 +44,20 @@ Deno.test("modifyinig something outside the scope of the function", () => {
 
 
 
+// Example 3: throwing exception: interface of the function ain't clear enough
+function mean(arr: number[]): number {
+    if (arr.length == 0) {
+        throw Error("Empty array");
+    }
+    const sum = arr.reduce((acc, element) => acc + element, 0);
+    return sum / arr.length;
+}
 
+Deno.test("testing the exception", () => {
+    const arr = [1, 2, 3, 4, 5];
+    assertEquals(mean(arr), 3);
+    assertEquals(mean([]), null); // Test will fail here
+})
 
 
 

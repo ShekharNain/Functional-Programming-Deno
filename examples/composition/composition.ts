@@ -12,6 +12,11 @@ function mulBy3(x: number): number {
 
 // Example 1
 Deno.test("Composition of two functions", () => {
+    // Imperative approach
+    // const twoAdded = plus2(1);
+    // const thrice = mulBy3(twoAdded);
+
+    // With Composition
     const composedFn = compose(mulBy3, plus2); // Point free definition of function. No arguments defined
     assertEquals(composedFn(1), 9);
     assertEquals(composedFn(10), 36);
