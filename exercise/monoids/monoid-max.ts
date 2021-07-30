@@ -9,7 +9,7 @@ Deno.test("Which conuntry has the max no. of covid cases?", () => {
 
   const covidReport: ICovidReport[] = [{
     country: "India",
-    cases: 100000
+    cases: 10000000
   }, {
     country: "US",
     cases: 5000000
@@ -18,6 +18,6 @@ Deno.test("Which conuntry has the max no. of covid cases?", () => {
     cases: 7000
   }];
   
-  const maxCases = "US" // Replace this with your implementation
-  assertEquals("US", maxCases);
+  const maxCases = "India" // Replace this with your implementation
+  assertEquals(maxCases, "India");
 });

@@ -1,3 +1,5 @@
+// import { compose } from "../../lib/index.ts";
+
 type Metadata = {
     productId : string ,
     correlationId : string | undefined,
