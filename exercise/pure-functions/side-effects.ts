@@ -53,9 +53,25 @@ function mean(arr: number[]): number {
     return sum / arr.length;
 }
 
-Deno.test("testing the exception", () => {
+function variance(arr: number[]): number {
+    const meanValue = mean(arr);
+    if (arr.length == 0) {
+        throw Error("Empty array");
+    }
+    const modifiedArr = arr
+        .map(val => val - meanValue);
+    return mean(modifiedArr);
+}
+
+Deno.test("testing the mean", () => {
     const arr = [1, 2, 3, 4, 5];
     assertEquals(mean(arr), 3);
+    assertEquals(mean([]), null); // Test will fail here
+})
+
+Deno.test("testing the variance", () => {
+    const arr = [1, 2, 3, 4, 5];
+    assertEquals(variance(arr), 0);
     assertEquals(mean([]), null); // Test will fail here
 })
 
